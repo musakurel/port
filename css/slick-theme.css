@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  
+<head lang="en">
+
+   <!--
+       ___  __ _ _ __ ___  ___ _ __
+      / __|/ _` | '__/ _ \/ _ \ '_  \
+      \__ \ (_| | | |  __/  __/ | | |
+      |___/\__, |_|  \___|\___|_| |_|
+              |_|
+  -->
+
+  <meta charset=UTF-8 />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Security Resources for Software Teams | Sqreen</title>
+  
+  
+  <meta name="description" content="Open source projects, security tools and ebooks for developers, devops and security teams" />
+  
+  <link rel="canonical" href="https://www.sqreen.com/resources">
+
+  <!-- Style -->
+  <link href="/css/style.css" rel="stylesheet"/>
+
+  <meta name="application-name" content="Sqreen" />
+  <meta http-equiv="cleartype" content="on" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@SqreenIO">
+  <meta name="twitter:creator" content="@SqreenIO" />
+  <meta name="twitter:url" content="https://www.sqreen.com/resources">
+  <meta name="twitter:text:title" content="Security Resources for Software Teams | Sqreen">
+  <meta name="twitter:description" content="Open source projects, security tools and ebooks for developers, devops and security teams" />
+  <meta name="twitter:image" content="https://www.sqreen.com/assets/img/share/share.png">
+
+  <!-- Facebook -->
+  <meta property="og:url" content="https://www.sqreen.com/resources">
+  <meta property="og:title" content="Security Resources for Software Teams | Sqreen">
+  <meta property="og:image" content="https://www.sqreen.com/assets/img/share/share.png">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="627">
+  <meta property="og:description" content="Open source projects, security tools and ebooks for developers, devops and security teams">
+  <meta property="og:site_name" content="Sqreen">
+  <meta property="og:locale" content="en_US">
+
+  
+
+  <!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/favicon/manifest.json">
+<link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#4842b7">
+<meta name="theme-color" content="#4842b7">
+
+  <!-- Segment -->
+<script type="text/javascript">
+  ! function() {
+    var analytics = window.analytics = window.analytics || [];
+    if (!analytics.initialize)
+      if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice.");
+      else {
+        analytics.invoked = !0;
+        analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "page", "once", "off", "on"];
+        analytics.factory = function(t) {
+          return function() {
+            var e = Array.prototype.slice.call(arguments);
+            e.unshift(t);
+            analytics.push(e);
+            return analytics
+          }
+        };
+        for (var t = 0; t < analytics.methods.length; t++) {
+          var e = analytics.methods[t];
+          analytics[e] = analytics.factory(e)
+        }
+        analytics.load = function(t) {
+          var e = document.createElement("script");
+          e.type = "text/javascript";
+          e.async = !0;
+          e.src = ("https:" === document.location.protocol ? "https://" : "http://") + "cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js";
+          var n = document.getElementsByTagName("script")[0];
+          n.parentNode.insertBefore(e, n)
+        };
+        analytics.SNIPPET_VERSION = "3.1.0";
+        analytics.load("5nxb5iyxWJCBesRTBrDlKocYYhI0yk6H");
+        analytics.page()
+      }
+  }();
+</script>
+
+<script src="/assets/js/purser.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.5.0/qs.min.js"></script>
+<script type="text/javascript">var tracking = Object.assign({},Qs.parse(location.search, { ignoreQueryPrefix: true }),purser.fetch(),{originalReferrer: (window.sessionStorage && sessionStorage.getItem('referrer'))? sessionStorage.getItem('referrer'): document.referrer});if (window.sessionStorage && !sessionStorage.getItem('referrer')) {sessionStorage.setItem('referrer', document.referrer)}window.analytics.page(null, null, tracking);document.cookie = 'tracking=' + JSON.stringify(tracking) + ';domain=sqreen.com';</script>
+
+<!-- Heap Analytics
+<script type="text/javascript">window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};heap.load("3784968534");</script>
+-->
+
+<!-- Heap Analytics (Via DataLine)-->
+<script type="text/javascript" async src="https://mcbzp.sqreen.com/cdn/12b96938-9e33-4ef1-b2e1-fd911ff5c9dd.js"></script>
+
+<!-- Fullstory -->
+<script>
+window['_fs_debug'] = false;
+window['_fs_host'] = 'fullstory.com';
+window['_fs_org'] = 'H52T8';
+window['_fs_namespace'] = 'FS';
+(function(m,n,e,t,l,o,g,y){
+    if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+    g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];
+    o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+    y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+    g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};
+    g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
+    g.consent=function(a){g("consent",!arguments.length||a)};
+    g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+    g.clearUserCookie=function(){};
+})(window,document,window['_fs_namespace'],'script','user');
+</script>
+
+<!-- SUMO -->
+<script async>(function(s,u,m,o,j,v){j=u.createElement(m);v=u.getElementsByTagName(m)[0];j.async=1;j.src=o;j.dataset.sumoSiteId='0192db87363591a2d11e3ab3e0366ec2da806a510963217183f98874951131e1';v.parentNode.insertBefore(j,v)})(window,document,'script','//load.sumo.com/');</script>
+
+
+
+</head>
+
+  <body class="">
+    <header class="">
+  <div class="wrapper">
+    <nav>
+      <div class="supnav">
+        <a href="https://my.sqreen.com/login">Log in</a>
+        <a href="mailto:hey@sqreen.com">Contact us</a>
+      </div>
+      <div class="subnav">
+        <div class="left">
+          <a href="/" class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 39.2" width="126" height="34">
+              <path class="cube" d="M56.4 16c-1.7-.9-3.2-1.4-4.8-1.4-1.3 0-2.1.5-2.1 1.4 0 2.5 9.3.4 9.3 7.1 0 3-2.7 5.5-7 5.5-1.9 0-4.3-.4-5.9-1.3 0 0-.1 0-.1-.1-.2-.2-.3-.5-.2-.7l1.1-2.5c.1-.3.5-.4.8-.3l.2.1c1.4.6 2.9.9 4.2.9 2 0 2.7-.5 2.7-1.6 0-2.8-9.3-.8-9.3-7.1 0-2.9 2.5-5.4 6.4-5.4 2 0 4.7.7 6.4 1.7l.2.1c.3.2.4.5.2.8l-1.1 2.5c-.1.3-.5.4-.8.3h-.2zm17.5-4.7h2.9c.3 0 .6.3.6.6v23.9c0 .3-.3.6-.6.6h-2.9c-.3 0-.6-.3-.6-.6v-8.4c-1.1.7-2.7 1.3-4.3 1.3-5 0-8.8-4-8.8-9s3.8-9 8.8-9c1.6 0 3.2.5 4.3 1.3v-.1c0-.3.3-.6.6-.6zm-.6 11.4v-6c-1.2-1.2-2.6-1.9-4.2-1.9-2.7 0-4.7 2.1-4.7 4.9s2 4.9 4.7 4.9c1.6.1 3-.5 4.2-1.9zm18-11.4c-.9-.4-1.9-.5-2.8-.5-1.6 0-3.2.5-4.5 1.3v-.2c0-.3-.2-.5-.5-.5h-3.2c-.3 0-.5.2-.5.5v16.4c0 .3.2.5.5.5h3.2c.3 0 .5-.2.5-.5V16.6c1-1.1 2.6-1.8 4.3-1.8.4 0 .9 0 1.4.1.3.1.6-.1.7-.3l1.2-2.7c0-.2-.1-.5-.3-.6zm15.2 15.6c-1.6 1-3.9 1.8-6.2 1.8-5.5 0-9.5-4-9.5-9.1 0-4.9 3.4-8.8 8.7-8.8 4.8 0 7.8 4.1 7.8 8.3 0 .4 0 .8-.1 1.2 0 .3-.3.5-.6.5H95c.5 2.6 2.6 4.2 5.3 4.2 1.5 0 3.2-.4 4.7-1.3.3-.1.6 0 .7.2l1.1 2.4c.1.2 0 .4-.1.5 0 0-.1.1-.2.1zm-11.3-9.3h7.9c-.2-1.7-1.7-3.1-3.6-3.1-2.4 0-3.8 1.4-4.3 3.1zm29.5 9.3c-1.6 1-3.9 1.8-6.2 1.8-5.5 0-9.5-4-9.5-9.1 0-4.9 3.4-8.8 8.7-8.8 4.8 0 7.8 4.1 7.8 8.3 0 .4 0 .8-.1 1.2 0 .3-.3.5-.6.5h-11.5c.5 2.6 2.5 4.2 5.3 4.2 1.5 0 3.2-.4 4.7-1.3.3-.1.6 0 .7.2l1.1 2.4c.1.2 0 .4-.2.5-.1 0-.1.1-.2.1zm-11.3-9.3h7.9c-.2-1.7-1.7-3.1-3.5-3.1-2.5 0-3.9 1.4-4.4 3.1zm13.9-5.7v16.2c0 .3.3.6.6.6h3c.3 0 .6-.3.6-.6V16.6c1-1.1 2.6-1.8 4.3-1.8 2.7 0 4.1 1.5 4.1 4.3v9c0 .3.3.6.6.6h2.9c.3 0 .6-.3.6-.6v-9.4c0-4.8-2.7-7.9-8.1-7.9-1.6 0-3.2.5-4.5 1.3V12c0-.3-.3-.6-.6-.6h-2.9c-.3-.1-.6.2-.6.5z" />
+              <ellipse class="circle" cx="17.3" cy="19.6" rx="9.3" ry="9.3"/>
+              <path class="letters" d="M16 35.7v-15L2.7 13.1v13.2l4.7-2.7c.3.8.8 1.6 1.3 2.3l-4.9 2.8 12.2 7zm2.6 0l12.2-7-4.9-2.8c.5-.7 1-1.5 1.3-2.3l4.7 2.7V13.1l-13.3 7.7v14.9zM3.7 10.6l13.6 7.9 13.6-7.9-12.3-7.1V9c-.4-.1-.9-.1-1.3-.1s-.9 0-1.3.1V3.5L3.7 10.6zM18.5.3l14.9 8.6c.7.4 1.2 1.2 1.2 2.1v17.2c0 .9-.5 1.6-1.2 2.1l-14.9 8.6c-.7.4-1.7.4-2.4 0L1.2 30.3C.5 29.8 0 29.1 0 28.2V11c0-.9.5-1.6 1.2-2.1L16.1.3c.7-.4 1.6-.4 2.4 0z"/>
+            </svg>
+          </a>
+        </div>
+        <div class="right">
+          <div class="nav-item-container">
+            <div class="nav-item dropdown">
+              <span>Platform</span>
+              <div class="dropdown-container">
+                <div class="columns">
+                  <div>
+                    <a href="/platform" class="icon-link">
+                      <img src="https://d33wubrfki0l68.cloudfront.net/837729ec9ecf485f4aa0ff607d4f46b9f33c5012/2309e/assets/img/icons/platform.svg" alt="Sqreen Platform Icon">
+                      <span class="category">Platform</span>
+                    </a>
+                    <a href="/protect" class="icon-link">
+                      <img src="https://d33wubrfki0l68.cloudfront.net/ad8d22c89980455f6709d24c8538b72968159487/dc53c/assets/img/icons/protection.svg" alt="Sqreen Protect Icon">
+                      <span class="category">Protect</span>
+                    </a>
+                    <a href="/observe" class="icon-link">
+                      <img src="https://d33wubrfki0l68.cloudfront.net/d57452065ea29507549860f8b9d9d047ff6a23d7/37938/assets/img/icons/observe.svg" alt="Sqreen Observe Icon">
+                      <span class="category">Observe</span>
+                    </a>
+                    <a href="/test" class="icon-link">
+                      <img src="https://d33wubrfki0l68.cloudfront.net/41c0cfad2fe9ecc0e6bd25813474c8702d6d6892/8e389/assets/img/icons/test.svg" alt="Sqreen Test Icon">
+                      <span class="category">Test</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <span>Solutions</span>
+              <div class="dropdown-container">
+                <div class="columns">
+                  <div>
+                    <a href="/runtime-application-self-protection">RASP</a>
+                    <a href="/in-app-web-application-firewall">In-App WAF</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="/pricing" class="nav-item link">
+              <span>Pricing</span>
+            </a>
+            <a href="/customers" class="nav-item link">
+              <span>Customers</span>
+            </a>
+            <div class="nav-item dropdown">
+              <span>Resources</span>
+              <div class="dropdown-container">
+                <div class="columns">
+                  <div>
+                    <a href="/resources">Content Library</a>
+                    <a href="/web-application-security">Learning Center</a>
+                    <a href="https://blog.sqreen.com/">Blog</a>
+                    <a href="https://docs.sqreen.com/">Docs</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="/demo" class="nav-item link">
+              <span>Demo</span>
+            </a>
+            <a href="https://my.sqreen.com/signup" class="nav-item button-v2 small">
+              <span>Free Trial</span>
+            </a>
+          </div>
+          <div class="burger">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 38" width="38" height="38" alt="Open the menu on mobile">
+              <path d="M28.3 13.8H9.7c-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1h18.6c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1zm0 6H9.7c-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1h18.6c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1zm0 6H9.7c-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1h18.6c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    <section class="header">
+  <div class="wrapper">
+    <h1>Sqreen Resources</h1>
+    <span class="subtitle">
+      Enjoy our collection of Open Source Projects, Guides, eBooks, and other Sqreen Security Resources. 
+    </span>
+  </div>
+</section>
+
+<section class="ebooks" id="ebooks">
+  <div class="wrapper">
+    <img class="icon-section" src="https://d33wubrfki0l68.cloudfront.net/bfc1515b8082732bfdaa0c399dca676545d74bf7/cb20a/assets/img/icons/checklist-icon.svg" alt="checklist icon">
+    <h2>Checklists and whitepapers</h2>
+    <ul>
+      <li>
+        <a href="/checklists/saas-cto-security-checklist" class="cover">
+          <img class="front" src="https://d33wubrfki0l68.cloudfront.net/386cf34747c2feaef0ede29ff554dfe8015fa762/36fe0/assets/img/ebooks/cover-small-cto-checklist.png" alt="CTO Security Checklist"/>
+          <img class="back" src="https://d33wubrfki0l68.cloudfront.net/386cf34747c2feaef0ede29ff554dfe8015fa762/36fe0/assets/img/ebooks/cover-small-cto-checklist.png" alt="CTO Security Checklist"/>
+        </a>
+        <h3>The SaaS CTO Security Checklist</h3>
+        <a href="/checklists/saas-cto-security-checklist" class="link">Get the Checklist</a>
+      </li>
+      <li>
+        <a href="/checklists/pentest-checklist" class="cover">
+          <img class="front" src="https://d33wubrfki0l68.cloudfront.net/dbb246a9f6cb70f9db922fe4f711b916bb6d0df6/716e6/assets/img/ebooks/pentest-cover.jpg" alt="Pentest Checklist"/>
+          <img class="back" src="https://d33wubrfki0l68.cloudfront.net/dbb246a9f6cb70f9db922fe4f711b916bb6d0df6/716e6/assets/img/ebooks/pentest-cover.jpg" alt="Pentest Checklist"/>
+        </a>
+        <h3>Pentest Best Practices Checklist</h3>
+        <a href="/checklists/pentest-checklist" class="link">Get the Checklist</a>
+      </li>
+      <li>
+        <a href="/checklists/php-security-checklist" class="cover">
+          <img class="front" src="https://d33wubrfki0l68.cloudfront.net/08856ddfa4616461a53414f030aa8b71a9fd982e/5ad93/assets/img/ebooks/cover-small-php-security-checklist.jpg" alt="PHP Security Checklist"/>
+          <img class="back" src="https://d33wubrfki0l68.cloudfront.net/08856ddfa4616461a53414f030aa8b71a9fd982e/5ad93/assets/img/ebooks/cover-small-php-security-checklist.jpg" alt="PHP Security Checklist"/>
+        </a>
+        <h3>The PHP Security Checklist</h3>
+        <a href="/checklists/php-security-checklist" class="link">Go to the checklist</a>
+      </li>
+      <li>
+        <a href="/checklists/security-engineer-checklist" class="cover">
+          <img class="front" src="https://d33wubrfki0l68.cloudfront.net/32e7b5d738846bf68054671aaf9f939ac0ae069a/040ae/assets/img/ebooks/cover-small-first-security-engineer-checklist.png" alt="The First Security Engineer's 100-day Checklist"/>
+          <img class="back" src="https://d33wubrfki0l68.cloudfront.net/32e7b5d738846bf68054671aaf9f939ac0ae069a/040ae/assets/img/ebooks/cover-small-first-security-engineer-checklist.png" alt="The First Security Engineer's 100-day Checklist"/>
+        </a>
+        <h3>The Early Security Engineer’s First 90 Days Checklist</h3>
+        <a href="/checklists/security-engineer-checklist" class="link">Go to the checklist</a>
+      </li>
+      <li>
+        <a href="/checklists/devops-security-checklist" class="cover">
+          <img class="front" src="https://d33wubrfki0l68.cloudfront.net/297e94f255b85d664056a24085bf1446e2ed631d/326af/assets/img/ebooks/cover-small-devops-checklist.jpg" alt="DevOps Security Checklist"/>
+          <img class="back" src="https://d33wubrfki0l68.cloudfront.net/297e94f255b85d664056a24085bf1446e2ed631d/326af/assets/img/ebooks/cover-small-devops-checklist.jpg" alt="DevOps Security Checklist"/>
+        </a>
+        <h3>The DevOps Security Checklist</h3>
+        <a href="/checklists/devops-security-checklist" class="link">Get the Checklist</a>
+      </li>
+      <li>
+        <a href="/checklists/devsecops-security-checklist" class="cover">
+          <img class="front" src="https://d33wubrfki0l68.cloudfront.net/2d20578189ff674c067c7483a9b95ca3a4ba5461/65104/assets/img/ebooks/cover-small-devsecops-security-checklist.jpg" alt="DevSecOps Security Checklist"/>
+          <img class="back" src="https://d33wubrfki0l68.cloudfront.net/2d20578189ff674c067c7483a9b95ca3a4ba5461/65104/assets/img/ebooks/cover-small-devsecops-security-checklist.jpg" alt="DevSecOps Security Checklist"/>
+        </a>
+        <h3>The DevSecOps Security Checklist</h3>
+        <a href="/checklists/devsecops-security-checklist" class="link">Get the Checklist</a>
+      </li>
+      <li>
+        <a href="/resources/aws-security" class="cover">
+          <img class="front" src="https://d33wubrfki0l68.cloudfront.net/b8b72ea8036f89e2db8d7d8189d534b64c903598/83597/assets/img/ebooks/cover-large-aws-security-best-practices.jpg" alt="AWS Security Best Practices"/>
+          <img class="back" src="https://d33wubrfki0l68.cloudfront.net/b8b72ea8036f89e2db8d7d8189d534b64c903598/83597/assets/img/ebooks/cover-large-aws-security-best-practices.jpg" alt="AWS Security Best Practices"/>
+        </a>
+        <h3>AWS Security Best Practices</h3>
+        <a href="/resources/aws-security" class="link">Get the Checklist</a>
+      </li>
+      <li>
+        <a href="/checklists/html-css-security-checklist" class="cover">
+          <img class="front" src="https://d33wubrfki0l68.cloudfront.net/6754e9411b04aa8be1ed4392bebc7f05714c6f07/0bd10/assets/img/ebooks/the-html-css-security-checklist.png" alt="The HTML/CSS Security Checklist"/>
+          <img class="back" src="https://d33wubrfki0l68.cloudfront.net/6754e9411b04aa8be1ed4392bebc7f05714c6f07/0bd10/assets/img/ebooks/the-html-css-security-checklist.png" alt="The HTML/CSS Security Checklist"/>
+        </a>
+        <h3>The HTML & CSS Security Checklist</h3>
+        <a href="/checklists/html-css-security-checklist" class="link">Get the Checklist</a>
+      </li>
+      <li>
+        <a href="/checklists/nodejs-security-handbook" class="cover">
+          <img class="front" src="https://d33wubrfki0l68.cloudfront.net/713234fe26af7d5d4976c2eb2fe4656d86162937/2993b/assets/img/ebooks/cover-small-nodejs-security-handbook.jpg" alt="Node.js Security Handbook"/>
+          <img class="back" src="https://d33wubrfki0l68.cloudfront.net/713234fe26af7d5d4976c2eb2fe4656d86162937/2993b/assets/img/ebooks/cover-small-nodejs-security-handbook.jpg" alt="Node.js Security Handbook"/>
+        </a>
+        <h3>The Node.js Security Handbook</h3>
+        <a href="/checklists/nodejs-security-handbook" class="link">Get the Handbook</a>
+      </li>
+      <li>
+        <a href="/checklists/ruby-security-handbook" class="cover">
+          <img class="front" src="https://d33wubrfki0l68.cloudfront.net/296f41303c1fa3b489afbe8c10650fa3704663c0/518f4/assets/img/ebooks/ruby-cover.jpg" alt="Ruby Security Handbook"/>
+          <img class="back" src="https://d33wubrfki0l68.cloudfront.net/296f41303c1fa3b489afbe8c10650fa3704663c0/518f4/assets/img/ebooks/ruby-cover.jpg" alt="Ruby Security Handbook"/>
+        </a>
+        <h3>The Ruby Security Handbook</h3>
+        <a href="/checklists/ruby-security-handbook" class="link">Get the Handbook</a>
+      </li>
+      <li>
+        <a href="/the-startups-guide-to-appsec" class="cover">
+          <img class="front" src="https://d33wubrfki0l68.cloudfront.net/280eaed13e39ab5693d7902d5a5acac44585404f/f6dc1/assets/img/ebooks/startups-guide-appsec-whitepaper-cover.png" alt="The Startup's Guide to App Sec whitepaper"/>
+          <img class="back" src="https://d33wubrfki0l68.cloudfront.net/280eaed13e39ab5693d7902d5a5acac44585404f/f6dc1/assets/img/ebooks/startups-guide-appsec-whitepaper-cover.png" alt="The Startup's Guide to App Sec whitepaper"/>
+        </a>
+        <h3>The Startup's Guide to Application Security</h3>
+        <a href="/the-startups-guide-to-appsec" class="link">Get the whitepaper</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="security-grader-block">
+  <div class="wrapper">
+    <div class="left">
+      <h2>The Security Grader</h2>
+      <p>Security can be fuzzy. It's not always easy to understand if you're doing the right things and covering the right bases. The security grader lets you compare your security capabilities against a high-quality benchmark and gives you a custom report based on your areas of improvements and strengths.</p>
+      <p>Try it and see how your security stacks up today!</p>
+      <a href="/security-grader" class="new-button violet large">Get your grade</a>
+    </div>
+    <div class="right">
+      <img src="https://d33wubrfki0l68.cloudfront.net/d5fc9a7bbd5332d3c4ecd6df028d949bf88c410f/5ed96/assets/img/illustrations/preview.png" alt="Picture of the Security Grader">
+    </div>
+  </div>
+</section>
+
+<section class="case-study-list" id="case-studies">
+  <div class="wrapper">
+    <img class="icon-section" src="https://d33wubrfki0l68.cloudfront.net/42f71ec5185b0225ca0793f4428c908d3a1c2218/ab370/assets/img/icons/customer-stories-icon.png" alt="Customer stories">
+    <h2>Customer Case Studies</h2>
+    <ul>
+      <li>
+        <a href="/customers/productboard">
+          <div class="cover" style="color:#f3f6f9">
+            <svg width="318" height="51" viewBox="0 0 318 51" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M309.687 31.003a3.333 3.333 0 002.764-1.094 6.335 6.335 0 00.957-3.715v-.532a7.347 7.347 0 00-.893-4.148 3.323 3.323 0 00-2.908-1.255 2.892 2.892 0 00-2.556 1.389 7.433 7.433 0 00-.909 4.047 7.031 7.031 0 00.919 3.983 3.006 3.006 0 002.626 1.325zm-1.723 3.908a5.848 5.848 0 01-4.988-2.46 11.288 11.288 0 01-1.812-6.82 11.302 11.302 0 011.845-6.892 5.998 5.998 0 015.082-2.47 5.882 5.882 0 015.188 2.638h.162a19.989 19.989 0 01-.37-3.587V9.562H318V34.59h-3.769l-.952-2.331h-.208a5.624 5.624 0 01-5.107 2.654zM297.329 16.27c.556-.01 1.113.039 1.659.146l-.37 4.6a5.617 5.617 0 00-1.452-.16 5.208 5.208 0 00-3.663 1.204 4.351 4.351 0 00-1.315 3.38v9.15h-4.914V16.607h3.721l.726 3.024h.241a6.785 6.785 0 012.263-2.435c.92-.609 2-.931 3.104-.927zm-19.998 9.988l-1.899.066a6.103 6.103 0 00-3.192.772 2.426 2.426 0 00-1.046 2.155c0 1.384.795 2.076 2.385 2.076a3.78 3.78 0 002.732-.982 3.462 3.462 0 001.02-2.607v-1.48zm1.452 8.332l-.952-2.444h-.127a7.283 7.283 0 01-2.553 2.164 8.318 8.318 0 01-3.425.603 5.54 5.54 0 01-4.085-1.48 5.679 5.679 0 01-1.492-4.214 4.753 4.753 0 012.009-4.224 11.653 11.653 0 016.048-1.502l3.125-.096v-.788a2.445 2.445 0 00-2.802-2.735c-1.763.08-3.491.523-5.075 1.302l-1.629-3.313a14.68 14.68 0 016.897-1.624 8.591 8.591 0 015.558 1.576 5.818 5.818 0 011.935 4.794v11.981h-3.432zm-27.957-9.023a7.548 7.548 0 00.877 4.037 3.146 3.146 0 002.862 1.367 3.088 3.088 0 002.828-1.357 7.655 7.655 0 00.863-4.047 7.428 7.428 0 00-.87-4.005 3.719 3.719 0 00-2.843-1.335 3.708 3.708 0 00-2.847 1.325 7.433 7.433 0 00-.87 4.014zm12.457 0a9.654 9.654 0 01-2.321 6.868 8.415 8.415 0 01-6.461 2.478 9.032 9.032 0 01-4.575-1.134 7.53 7.53 0 01-3.045-3.257 10.924 10.924 0 01-1.066-4.956 9.596 9.596 0 012.305-6.852 8.475 8.475 0 016.478-2.444 9.078 9.078 0 014.575 1.127 7.507 7.507 0 013.045 3.233 10.816 10.816 0 011.065 4.936zm-28.81-5.373a3.094 3.094 0 00-2.659 1.12 6.392 6.392 0 00-.869 3.69v.532a7.575 7.575 0 00.86 4.148 3.08 3.08 0 002.732 1.257 2.75 2.75 0 002.409-1.391 7.53 7.53 0 00.895-4.047 7.129 7.129 0 00-.902-3.981 2.848 2.848 0 00-2.466-1.328zm1.579-3.924a5.833 5.833 0 014.995 2.484 11.397 11.397 0 011.805 6.812 11.175 11.175 0 01-1.864 6.902 6.512 6.512 0 01-4.987 2.444 6.5 6.5 0 01-5.056-2.298h-.34l-.82 1.976h-3.755V9.563h4.915v5.82c0 .742-.065 1.927-.194 3.556h.194a5.685 5.685 0 015.107-2.67zm-16.699 16.44a9.425 9.425 0 002.416-.322v2.042c-.409.174-.84.29-1.28.346a9.578 9.578 0 01-1.523.136c-3.415 0-5.123-1.796-5.124-5.388V19.036h-2.529v-1.287l2.529-1.109 1.127-3.764h1.548v4.084h5.124v2.076h-5.124V29.41c-.059.88.211 1.752.757 2.445a2.64 2.64 0 002.079.854zm-16.337 2.203a7.538 7.538 0 01-5.937-2.358 9.676 9.676 0 01-2.103-6.666 9.989 9.989 0 012.133-6.836 7.7 7.7 0 016.084-2.412c.856.001 1.709.093 2.545.273.691.13 1.362.346 1.999.643l-.822 2.268a12.451 12.451 0 00-1.933-.588 8.808 8.808 0 00-1.853-.233c-3.587 0-5.381 2.284-5.381 6.852a8.15 8.15 0 001.313 4.988 4.57 4.57 0 003.891 1.737 11.961 11.961 0 004.528-.948v2.362a9.658 9.658 0 01-4.464.918zM178.22 16.96v11.438a4.584 4.584 0 00.983 3.217 4.002 4.002 0 003.076 1.061 5.01 5.01 0 004.051-1.513 7.607 7.607 0 001.283-4.936V16.96h2.675v17.63h-2.209l-.386-2.363h-.144a5.332 5.332 0 01-2.282 1.993 7.666 7.666 0 01-3.326.691 6.776 6.776 0 01-4.827-1.527 6.498 6.498 0 01-1.603-4.89V16.96h2.709zm-16.066 15.716a4.883 4.883 0 003.974-1.487 7.536 7.536 0 001.23-4.802v-.563a8.83 8.83 0 00-1.249-5.348 4.746 4.746 0 00-3.986-1.6 4.088 4.088 0 00-3.601 1.826 9.057 9.057 0 00-1.249 5.153 8.696 8.696 0 001.239 5.099 4.212 4.212 0 003.642 1.722zm5.351-.45h-.147a6.291 6.291 0 01-5.541 2.685 6.55 6.55 0 01-5.388-2.364 10.386 10.386 0 01-1.928-6.723 10.58 10.58 0 011.932-6.772 6.504 6.504 0 015.384-2.412 6.423 6.423 0 015.511 2.605h.207l-.111-1.27-.066-1.238V9.563h2.676v25.026h-2.176l-.353-2.362zm-30.164-6.468a8.358 8.358 0 001.353 5.149 5.39 5.39 0 003.982 1.77 5.38 5.38 0 003.985-1.763 8.292 8.292 0 001.362-5.156 8.164 8.164 0 00-1.362-5.106 4.788 4.788 0 00-4.019-1.746 4.716 4.716 0 00-3.964 1.723 8.274 8.274 0 00-1.337 5.13zm13.454 0a9.714 9.714 0 01-2.175 6.732 7.669 7.669 0 01-6.011 2.421 7.961 7.961 0 01-4.205-1.11 7.305 7.305 0 01-2.835-3.184 11.115 11.115 0 01-1-4.859 9.716 9.716 0 012.159-6.715 7.646 7.646 0 015.994-2.403 7.476 7.476 0 015.891 2.46 9.679 9.679 0 012.182 6.658zm-20.657-9.118c.709-.007 1.416.058 2.112.193l-.372 2.476a9.154 9.154 0 00-1.933-.24 4.716 4.716 0 00-3.668 1.736 6.344 6.344 0 00-1.52 4.327v9.457h-2.675V16.96h2.208l.307 3.266h.127a7.807 7.807 0 012.369-2.654 5.32 5.32 0 013.045-.932zm-20.447 2.266a4.745 4.745 0 00-3.915 1.497 7.685 7.685 0 00-1.24 4.762v.593a8.805 8.805 0 001.24 5.316 4.722 4.722 0 003.981 1.602 4.137 4.137 0 003.585-1.85 8.781 8.781 0 001.296-5.098 8.436 8.436 0 00-1.296-5.06 4.27 4.27 0 00-3.651-1.762zm.386 16.005a7.692 7.692 0 01-3.149-.632 5.932 5.932 0 01-2.392-1.956h-.193c.125.97.19 1.949.193 2.927v7.255h-2.675V16.96h2.175l.37 2.415h.13a6.195 6.195 0 012.399-2.092 7.29 7.29 0 013.142-.643 6.53 6.53 0 015.424 2.396 10.544 10.544 0 011.909 6.722 10.486 10.486 0 01-1.942 6.751 6.552 6.552 0 01-5.391 2.402z" fill="#475159"/><path d="M25.38 0v25.5L50.843 0H25.38z" fill="#2395D0"/><path d="M0 0l25.465 25.5V0H0z" fill="#5FBAE6"/><path d="M50.93 25.5V51l25.465-25.5H50.93z" fill="#8E271D"/><path d="M25.465 25.5L50.93 51V25.5H25.465z" fill="#CE3527"/><path d="M25.465 51H50.93L25.465 25.5V51z" fill="#F8AD35"/><path d="M0 51h25.465V25.5L0 51z" fill="#FEDF71"/><path d="M50.93 0v25.5h25.465L50.93 0z" fill="#AA2923"/><path d="M50.93 0L25.465 25.5H50.93V0z" fill="#E54B3B"/></svg>
+          </div>
+          <div class="block-title">
+            <h3>How productboard is moving closer to SOC 2 compliance with Sqreen</h3>
+            <span class="link">
+              Read the case study<img src="https://d33wubrfki0l68.cloudfront.net/2d18b17a6e986b108fa56003f1f96c8ebd3a3d11/b8844/assets/img/icons/small-right-arrow.svg" alt="Read the case study">
+            </span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/customers/ninjacat">
+          <div class="cover" style="color:#f3f6f9">
+            <svg width="156" height="48" viewBox="0 0 156 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect y="0.482727" width="156" height="47.5172" rx="23.7586" fill="#212225" />
+              <g clip-path="url(#clip0)">
+                <path
+                  d="M40.3318 29.6586C40.2242 29.6652 40.1164 29.6495 40.0152 29.6125C39.914 29.5756 39.8216 29.5182 39.7438 29.4441C39.671 29.3697 39.6143 29.2814 39.5772 29.1844C39.5401 29.0875 39.5233 28.9841 39.5279 28.8804V19.2628C39.5193 19.1557 39.5341 19.0481 39.5715 18.9472C39.6088 18.8464 39.6678 18.7549 39.7442 18.6789C39.8206 18.6029 39.9128 18.5444 40.0142 18.5073C40.1157 18.4702 40.224 18.4554 40.3318 18.464C40.436 18.4594 40.5401 18.4761 40.6377 18.513C40.7352 18.5499 40.8241 18.6062 40.8989 18.6785C40.9735 18.7558 41.0312 18.8477 41.0684 18.9482C41.1056 19.0488 41.1214 19.1559 41.1148 19.2628V28.8804C41.1204 28.9838 41.1041 29.0871 41.0669 29.1838C41.0297 29.2804 40.9724 29.3682 40.8987 29.4413C40.8251 29.5145 40.7368 29.5714 40.6396 29.6084C40.5423 29.6454 40.4383 29.6617 40.3344 29.6561L40.3318 29.6586ZM49.1768 29.6586C49.0702 29.6624 48.9639 29.6443 48.8646 29.6056C48.7653 29.567 48.675 29.5084 48.5993 29.4337C48.5254 29.3618 48.4672 29.2756 48.4283 29.1804C48.3894 29.0853 48.3705 28.9832 48.373 28.8804V23.5597C48.4038 22.8365 48.2404 22.1182 47.8995 21.4785C47.5927 20.9478 47.1334 20.5202 46.5805 20.2504C45.9931 19.971 45.3483 19.8311 44.6971 19.842C44.0684 19.8329 43.4458 19.9655 42.876 20.2298C42.3603 20.4666 41.9163 20.8339 41.5883 21.2949C41.2725 21.7449 41.1069 22.2821 41.1148 22.8307H39.9832C39.9976 22.0141 40.2398 21.2175 40.683 20.5297C41.1189 19.8572 41.7219 19.3078 42.4338 18.9345C43.1816 18.5403 44.0171 18.3394 44.8636 18.3502C45.7716 18.3345 46.6696 18.5414 47.4781 18.9526C48.2454 19.3545 48.8782 19.9699 49.2991 20.7236C49.7684 21.5971 49.9989 22.5777 49.9677 23.5675V28.8882C49.9677 29.0939 49.8855 29.2912 49.7391 29.4366C49.5927 29.5821 49.3942 29.6638 49.1872 29.6638L49.1768 29.6586Z"
+                  fill="white" />
+                <path
+                  d="M56.5572 29.6586C56.4495 29.6672 56.3411 29.6524 56.2397 29.6153C56.1383 29.5782 56.0461 29.5196 55.9697 29.4436C55.8932 29.3677 55.8343 29.2761 55.797 29.1753C55.7596 29.0745 55.7448 28.9668 55.7534 28.8597V19.2628C55.7448 19.1557 55.7596 19.048 55.797 18.9472C55.8343 18.8464 55.8932 18.7548 55.9697 18.6789C56.0461 18.6029 56.1383 18.5443 56.2397 18.5072C56.3411 18.4701 56.4495 18.4553 56.5572 18.4639C56.6615 18.4593 56.7656 18.476 56.8631 18.5129C56.9607 18.5498 57.0496 18.6062 57.1244 18.6785C57.199 18.7558 57.2567 18.8476 57.2939 18.9482C57.3311 19.0487 57.3469 19.1559 57.3403 19.2628V28.8597C57.3469 28.9667 57.3311 29.0738 57.2939 29.1743C57.2567 29.2749 57.199 29.3667 57.1244 29.444C57.0496 29.5163 56.9607 29.5727 56.8631 29.6096C56.7656 29.6465 56.6615 29.6632 56.5572 29.6586Z"
+                  fill="white" />
+                <path
+                  d="M64.1328 29.6586C64.0252 29.6652 63.9174 29.6495 63.8162 29.6125C63.715 29.5756 63.6226 29.5182 63.5448 29.4441C63.4721 29.3697 63.4154 29.2814 63.3782 29.1844C63.3411 29.0875 63.3243 28.9841 63.3289 28.8804V19.2628C63.3203 19.1557 63.3352 19.0481 63.3725 18.9472C63.4099 18.8464 63.4688 18.7549 63.5452 18.6789C63.6217 18.6029 63.7138 18.5444 63.8152 18.5073C63.9167 18.4702 64.025 18.4554 64.1328 18.464C64.237 18.4594 64.3411 18.4761 64.4387 18.513C64.5362 18.5499 64.6251 18.6062 64.6999 18.6785C64.7746 18.7558 64.8323 18.8477 64.8694 18.9482C64.9066 19.0488 64.9224 19.1559 64.9158 19.2628V28.8804C64.9215 28.9838 64.9051 29.0871 64.8679 29.1838C64.8307 29.2804 64.7734 29.3682 64.6998 29.4413C64.6261 29.5145 64.5378 29.5714 64.4406 29.6084C64.3433 29.6454 64.2394 29.6617 64.1354 29.6561L64.1328 29.6586ZM72.9779 29.6586C72.8712 29.6624 72.765 29.6443 72.6656 29.6056C72.5663 29.567 72.476 29.5084 72.4003 29.4337C72.3265 29.3618 72.2683 29.2756 72.2293 29.1804C72.1904 29.0853 72.1716 28.9832 72.174 28.8804V23.5597C72.2049 22.8365 72.0415 22.1182 71.7005 21.4785C71.3937 20.9478 70.9344 20.5202 70.3816 20.2504C69.7941 19.971 69.1493 19.8311 68.4981 19.842C67.8694 19.8329 67.2468 19.9655 66.677 20.2298C66.1614 20.4666 65.7173 20.8339 65.3893 21.2949C65.0735 21.7449 64.9079 22.2821 64.9158 22.8307H63.7842C63.7986 22.0141 64.0409 21.2175 64.484 20.5297C64.9199 19.8572 65.5229 19.3078 66.2348 18.9345C66.9826 18.5403 67.8182 18.3394 68.6646 18.3502C69.5726 18.3345 70.4706 18.5414 71.2791 18.9526C72.0464 19.3545 72.6792 19.9699 73.1001 20.7236C73.5694 21.5971 73.7999 22.5777 73.7687 23.5675V28.8882C73.7687 29.0939 73.6865 29.2912 73.5401 29.4366C73.3938 29.5821 73.1953 29.6638 72.9883 29.6638L72.9779 29.6586Z"
+                  fill="white" />
+                <path
+                  d="M76.2401 34.4467C76.1344 34.4507 76.0289 34.4337 75.9298 34.3969C75.8306 34.36 75.7398 34.3041 75.6626 34.2322C75.5463 34.1198 75.4666 33.9754 75.434 33.8175C75.4013 33.6596 75.4171 33.4957 75.4793 33.3468C75.5416 33.198 75.6474 33.0712 75.7831 32.9829C75.9187 32.8946 76.078 32.8488 76.2401 32.8516C76.8225 32.8639 77.3978 32.7229 77.9077 32.4431C78.3821 32.1757 78.7763 31.7875 79.0497 31.3184C79.3378 30.8138 79.4834 30.2413 79.4712 29.6612V19.2628C79.4646 19.1559 79.4804 19.0488 79.5176 18.9482C79.5547 18.8476 79.6125 18.7558 79.6871 18.6785C79.7619 18.6062 79.8508 18.5498 79.9483 18.5129C80.0459 18.476 80.15 18.4594 80.2542 18.4639C80.36 18.46 80.4655 18.477 80.5646 18.5138C80.6637 18.5506 80.7545 18.6066 80.8317 18.6785C80.9083 18.7549 80.9679 18.8464 81.0069 18.947C81.0458 19.0476 81.0633 19.1551 81.0581 19.2628V29.6586C81.0744 30.5236 80.8618 31.3778 80.4415 32.1354C80.0406 32.8476 79.449 33.4355 78.7324 33.834C77.97 34.2517 77.1105 34.463 76.2401 34.4467Z"
+                  fill="white" />
+                <path
+                  d="M91.1883 29.7517C90.205 29.768 89.2359 29.5177 88.3851 29.0275C87.5344 28.5373 86.8342 27.8259 86.3599 26.9698C85.8651 26.0812 85.613 25.0793 85.6289 24.0639C85.6116 23.039 85.8712 22.0284 86.3807 21.1372C86.8698 20.2892 87.5774 19.586 88.4307 19.0999C89.3246 18.6099 90.3288 18.3529 91.3496 18.3529C92.3704 18.3529 93.3746 18.6099 94.2684 19.0999C95.1171 19.5885 95.8207 20.2914 96.308 21.1372C96.8206 22.0284 97.0896 23.0374 97.0885 24.0639L96.4511 24.5551C96.465 25.4839 96.2269 26.3993 95.7617 27.2051C95.3128 27.9784 94.6667 28.6204 93.8886 29.0666C93.0673 29.5331 92.1341 29.7699 91.1883 29.7517ZM91.3522 28.3194C92.0999 28.3316 92.8367 28.1403 93.4828 27.7661C94.106 27.3992 94.6182 26.8723 94.9656 26.2407C95.324 25.5676 95.5113 24.8176 95.5113 24.0561C95.5113 23.2946 95.324 22.5446 94.9656 21.8715C94.6142 21.2428 94.1029 20.7168 93.4828 20.3461C92.8358 19.9776 92.1031 19.7837 91.3574 19.7837C90.6117 19.7837 89.8789 19.9776 89.232 20.3461C88.6058 20.7159 88.0875 21.2417 87.7283 21.8715C87.3633 22.5425 87.1722 23.2933 87.1722 24.0561C87.1722 24.8189 87.3633 25.5697 87.7283 26.2407C88.0881 26.8786 88.615 27.4077 89.2531 27.7719C89.8911 28.136 90.6165 28.3217 91.3522 28.309V28.3194ZM96.2742 29.6483C96.1684 29.6522 96.0629 29.6352 95.9638 29.5984C95.8647 29.5616 95.7739 29.5056 95.6967 29.4337C95.6211 29.3609 95.5619 29.2731 95.5229 29.1759C95.4839 29.0788 95.466 28.9746 95.4703 28.8701V25.3824L95.8606 23.7665L97.0781 24.0639V28.8727C97.0824 28.9771 97.0645 29.0814 97.0255 29.1785C96.9865 29.2756 96.9273 29.3635 96.8517 29.4363C96.7751 29.5096 96.6846 29.567 96.5854 29.6051C96.4863 29.6433 96.3805 29.6615 96.2742 29.6586V29.6483Z"
+                  fill="white" />
+                <path
+                  d="M107.146 29.7517C106.131 29.7699 105.13 29.5115 104.253 29.0045C103.417 28.514 102.727 27.8107 102.255 26.9672C101.761 26.0794 101.509 25.0785 101.524 24.0639C101.506 23.0454 101.747 22.0388 102.224 21.1372C102.668 20.3008 103.329 19.5974 104.139 19.0999C104.985 18.6001 105.956 18.3491 106.94 18.376C107.739 18.3681 108.53 18.5358 109.256 18.8672C109.982 19.2102 110.619 19.7144 111.118 20.3409C111.187 20.4065 111.238 20.4882 111.267 20.5786C111.296 20.669 111.301 20.7651 111.282 20.858C111.231 21.0567 111.105 21.2286 110.931 21.3389C110.86 21.3924 110.778 21.4303 110.691 21.4499C110.604 21.4695 110.514 21.4704 110.426 21.4526C110.234 21.4146 110.063 21.309 109.942 21.1553C109.574 20.7219 109.113 20.3758 108.592 20.1424C108.072 19.9089 107.506 19.7938 106.935 19.8057C106.219 19.7911 105.514 19.9833 104.906 20.359C104.321 20.7294 103.851 21.2539 103.548 21.874C103.22 22.5572 103.056 23.3069 103.069 24.0639C103.057 24.8254 103.236 25.5779 103.59 26.2537C103.92 26.8816 104.418 27.4061 105.031 27.7687C105.673 28.1438 106.406 28.3353 107.151 28.322C107.65 28.3275 108.147 28.2551 108.623 28.1074C109.06 27.9696 109.463 27.7433 109.807 27.4429C109.952 27.3148 110.134 27.236 110.327 27.218C110.417 27.2115 110.506 27.2225 110.591 27.2505C110.676 27.2784 110.754 27.3228 110.822 27.3809C110.977 27.5121 111.076 27.6969 111.1 27.898C111.111 27.9895 111.099 28.0824 111.065 28.1682C111.031 28.254 110.976 28.33 110.905 28.3892C109.877 29.311 108.529 29.7996 107.146 29.7517Z"
+                  fill="white" />
+                <path
+                  d="M121.311 29.7517C120.328 29.7688 119.36 29.5196 118.509 29.0308C117.659 28.5421 116.958 27.8322 116.483 26.9776C115.986 26.0867 115.734 25.082 115.752 24.0639C115.734 23.039 115.994 22.0284 116.503 21.1372C116.992 20.2892 117.7 19.586 118.553 19.0999C119.447 18.6099 120.451 18.3529 121.472 18.3529C122.493 18.3529 123.497 18.6099 124.391 19.0999C125.24 19.5885 125.943 20.2914 126.431 21.1372C126.943 22.0284 127.212 23.0374 127.211 24.0639L126.574 24.5551C126.588 25.4839 126.35 26.3993 125.884 27.2051C125.435 27.9784 124.789 28.6204 124.011 29.0666C123.19 29.5331 122.257 29.7699 121.311 29.7517ZM121.475 28.3194C122.223 28.3316 122.959 28.1403 123.605 27.7661C124.229 27.3992 124.741 26.8723 125.088 26.2407C125.447 25.5676 125.634 24.8176 125.634 24.0561C125.634 23.2946 125.447 22.5446 125.088 21.8715C124.737 21.2428 124.226 20.7168 123.605 20.3461C122.958 19.9776 122.226 19.7837 121.48 19.7837C120.734 19.7837 120.002 19.9776 119.355 20.3461C118.728 20.7159 118.21 21.2417 117.851 21.8715C117.486 22.5425 117.295 23.2933 117.295 24.0561C117.295 24.8189 117.486 25.5697 117.851 26.2407C118.211 26.8786 118.738 27.4077 119.376 27.7719C120.014 28.136 120.739 28.3217 121.475 28.309V28.3194ZM126.397 29.6483C126.291 29.6522 126.186 29.6352 126.086 29.5984C125.987 29.5616 125.897 29.5056 125.819 29.4337C125.744 29.3609 125.685 29.2731 125.646 29.1759C125.607 29.0788 125.589 28.9746 125.593 28.8701V25.3824L125.983 23.7665L127.201 24.0639V28.8727C127.205 28.9771 127.187 29.0814 127.148 29.1785C127.109 29.2756 127.05 29.3635 126.974 29.4363C126.898 29.5096 126.807 29.567 126.708 29.6051C126.609 29.6433 126.503 29.6615 126.397 29.6586V29.6483Z"
+                  fill="white" />
+                <path
+                  d="M131.524 20.2453C131.429 20.2489 131.334 20.2337 131.245 20.2004C131.155 20.1671 131.074 20.1164 131.004 20.0514C130.938 19.9902 130.885 19.9158 130.849 19.8329C130.814 19.75 130.797 19.6605 130.799 19.5705C130.795 19.4772 130.812 19.3842 130.847 19.2978C130.883 19.2113 130.936 19.1333 131.004 19.0689C131.074 19.0039 131.155 18.9532 131.245 18.9199C131.334 18.8866 131.429 18.8714 131.524 18.875H136.774C136.87 18.8714 136.965 18.8866 137.054 18.9199C137.143 18.9532 137.225 19.0039 137.294 19.0689C137.362 19.1334 137.416 19.2114 137.451 19.2979C137.487 19.3843 137.503 19.4772 137.5 19.5705C137.502 19.6605 137.485 19.75 137.449 19.8329C137.414 19.9158 137.361 19.9902 137.294 20.0514C137.225 20.1164 137.143 20.1671 137.054 20.2004C136.965 20.2337 136.87 20.2489 136.774 20.2453H131.524ZM136.644 29.6586C135.971 29.6735 135.307 29.5026 134.725 29.1649C134.144 28.8271 133.668 28.3358 133.351 27.7454C133.013 27.1198 132.842 26.4182 132.856 25.7082V15.7028C132.852 15.5977 132.869 15.4928 132.907 15.3943C132.944 15.2958 133 15.2056 133.072 15.1288C133.146 15.0537 133.234 14.9948 133.332 14.9561C133.429 14.9173 133.534 14.8995 133.639 14.9039C133.746 14.9006 133.852 14.9191 133.951 14.9581C134.05 14.9971 134.14 15.0558 134.215 15.1307C134.29 15.2055 134.349 15.2949 134.389 15.3933C134.428 15.4916 134.447 15.597 134.443 15.7028V25.7082C134.417 26.3391 134.64 26.9552 135.065 27.4249C135.265 27.6409 135.51 27.8115 135.782 27.9253C136.055 28.039 136.349 28.0932 136.644 28.0841H137.201C137.301 28.0807 137.401 28.0991 137.494 28.1379C137.586 28.1768 137.669 28.2352 137.737 28.3091C137.877 28.467 137.951 28.6726 137.942 28.883C137.946 28.9893 137.926 29.0952 137.883 29.1927C137.84 29.2903 137.776 29.377 137.695 29.4466C137.524 29.5919 137.304 29.6684 137.079 29.6612L136.644 29.6586Z"
+                  fill="white" />
+                <path
+                  d="M25.3212 17.9055H25.7426C26.8596 17.9169 27.9641 18.1398 28.9971 18.5622L32.4414 16.9231C33.0294 16.7653 33.0476 17.2798 33.0476 17.2798C33.5913 22.9703 33.365 24.8395 33.365 24.8395C33.3442 26.0406 33.034 27.2193 32.4606 28.2769C31.8871 29.3344 31.067 30.24 30.0689 30.9177L29.8686 31.0625C28.5353 31.9758 26.9508 32.4579 25.3316 32.4431H25.2978C23.6785 32.4579 22.0941 31.9758 20.7608 31.0625L20.5604 30.9177C19.5604 30.2411 18.7383 29.3361 18.163 28.2785C17.5876 27.2208 17.2759 26.0415 17.2539 24.8395C17.2539 24.8395 17.0172 22.9573 17.5583 17.2669C17.5583 17.2669 17.5765 16.7498 18.1645 16.9101L21.6088 18.5493C22.6418 18.1269 23.7464 17.904 24.8633 17.8926H25.2847"
+                  fill="white" />
+                <path
+                  d="M25.3003 23.265C25.8726 23.2718 26.4448 23.2494 27.0147 23.1978C28.5496 23.0478 29.1401 22.9625 29.1401 22.9625C29.1401 22.9625 31.3774 22.7789 31.7833 24.6042C32.1891 26.4295 30.9534 27.1663 30.9534 27.1663C30.9534 27.1663 30.2432 27.6834 28.9789 27.4766C28.9789 27.4766 28.1386 27.3551 26.7026 27.0888C26.2419 26.985 25.7724 26.9244 25.3003 26.9078C24.8293 26.9229 24.3607 26.9818 23.9007 27.0836C22.4647 27.3421 21.6244 27.4714 21.6244 27.4714C20.3575 27.6834 19.6499 27.1663 19.6499 27.1663C19.6499 27.1663 18.4116 26.4295 18.8174 24.6016C19.2233 22.7738 21.4605 22.9599 21.4605 22.9599C21.4605 22.9599 22.0511 23.0427 23.586 23.1952C24.1558 23.2477 24.7281 23.271 25.3003 23.265Z"
+                  fill="#212225" />
+                <path
+                  d="M25.3029 24.5344C28.3891 24.5344 30.8909 24.0876 30.8909 23.5365C30.8909 22.9853 28.3891 22.5385 25.3029 22.5385C22.2168 22.5385 19.7149 22.9853 19.7149 23.5365C19.7149 24.0876 22.2168 24.5344 25.3029 24.5344Z"
+                  fill="#212225" />
+                <path
+                  d="M25.3368 28.004C28.466 28.004 31.0028 27.5572 31.0028 27.006C31.0028 26.4549 28.466 26.0081 25.3368 26.0081C22.2075 26.0081 19.6707 26.4549 19.6707 27.006C19.6707 27.5572 22.2075 28.004 25.3368 28.004Z"
+                  fill="#212225" />
+                <ellipse cx="21.5895" cy="25.1747" rx="1.30145" ry="1.29339" fill="white" />
+                <ellipse cx="29.0729" cy="25.1747" rx="1.30145" ry="1.29339" fill="white" />
+                <path
+                  d="M28.1932 26.5458C28.5682 26.5458 28.8722 26.2738 28.8722 25.9383C28.8722 25.6027 28.5682 25.3307 28.1932 25.3307C27.8182 25.3307 27.5142 25.6027 27.5142 25.9383C27.5142 26.2738 27.8182 26.5458 28.1932 26.5458Z"
+                  fill="#212225" />
+                <path
+                  d="M22.4127 26.5019C22.7863 26.5019 23.0891 26.2299 23.0891 25.8943C23.0891 25.5588 22.7863 25.2867 22.4127 25.2867C22.0392 25.2867 21.7363 25.5588 21.7363 25.8943C21.7363 26.2299 22.0392 26.5019 22.4127 26.5019Z"
+                  fill="#212225" />
+              </g>
+              <defs>
+                <clipPath id="clip0">
+                  <rect width="121.034" height="19.7241" fill="white" transform="translate(17.0345 14.8276)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <div class="block-title">
+            <h3>Protecting applications with a modern security partner: why NinjaCat chose Sqreen</h3>
+            <span class="link">
+              Read the case study<img src="https://d33wubrfki0l68.cloudfront.net/2d18b17a6e986b108fa56003f1f96c8ebd3a3d11/b8844/assets/img/icons/small-right-arrow.svg" alt="Read the case study">
+            </span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/customers/freeagent">
+          <div class="cover" style="color:#f3f6f9">
+            <svg xmlns="http://www.w3.org/2000/svg" width="154" height="33" viewBox="0 0 114.04959 23">
+              <defs>
+                <style>
+                  .ax{fill:#017abf}.bx{fill:#7cc04b}
+                </style>
+              </defs>
+              <path class="ax" d="M0 1.01377L.20774.08611A1.63021 1.63021 0 0 1 .3666.217 4.68022 4.68022 0 0 0 3.615 1.64538a20.07119 20.07119 0 0 0 3.96487-.341 20.30931 20.30931 0 0 1 2.76694-.22491 3.21268 3.21268 0 0 1 3.33171 2.78643c.12594.48742.19388.98983.29689 1.53.163-.40335.318-.7779.46622-1.15509A6.77672 6.77672 0 0 1 16.89732 1.017a5.33568 5.33568 0 0 1 5.21624-.46821l-.55825 3.57674a2.46788 2.46788 0 0 0-1.69982-.12715 1.85513 1.85513 0 0 0-1.232.97408c-.67628 1.48445-1.31182 2.98747-1.962 4.48377-.0071.01632.00321.04021.00925.09656h3.39973l-.63962 4.13329h-.332c-1.26721 0-2.53447.0056-3.80159-.00526a.36489.36489 0 0 0-.41107.277c-1.09708 2.85077-2.2105 5.69526-3.30348 8.54758a.49312.49312 0 0 1-.56656.37645c-1.23461-.02979-2.47-.02688-3.70511-.03682-.06052-.00048-.121-.00785-.21974-.01463.27629-.69964.54184-1.37206.80736-2.04449 1.05616-2.67468 2.13064-5.34238 3.15394-8.02957a6.23907 6.23907 0 0 0 .36325-1.84889 1.63105 1.63105 0 0 0-1.78729-1.83553c-1.01993-.03133-2.043.05466-3.06505.07175a11.65577 11.65577 0 0 1-1.54791-.04081 2.08616 2.08616 0 0 1-2.0345-1.6724A2.28324 2.28324 0 0 1 .90856 4.87475a.25266.25266 0 0 0-.05432-.18746 2.40186 2.40186 0 0 1-.79637-1.63521A.638.638 0 0 0 0 2.9146zm11.20724 6.52148a6.80411 6.80411 0 0 0-.16914-2.77059 1.72455 1.72455 0 0 0-1.6829-1.33959c-.75294-.01339-1.50792.09986-2.26231.15264-.84906.05941-1.69962.16755-2.54729.14951A6.59449 6.59449 0 0 1 3.10045 3.372a1.09954 1.09954 0 0 0 .70082 1.22419A1.11738 1.11738 0 0 0 5.00282 6.032a1.4099 1.4099 0 0 0 1.60318.99328c.69181-.06006 1.37659-.19683 2.067-.278a2.47533 2.47533 0 0 1 2.53424.78797z"/>
+              <path class="bx" d="M66.39965 18.25122c1.14-.00416 2.28-.01209 3.41992-.00442.08024.00054.1792.10269.23416.182a1.42772 1.42772 0 0 1 .107.29546 2.00751 2.00751 0 0 0 3.09364.98277 3.444 3.444 0 0 0 .9241-.97137 4.73874 4.73874 0 0 0 .65653-2.256c-.3239.12154-.61637.227-.90563.34057a5.56961 5.56961 0 0 1-3.69013.18987 4.87033 4.87033 0 0 1-3.24747-3.01532 7.13063 7.13063 0 0 1 .50349-6.70345 5.92159 5.92159 0 0 1 8.56076-1.97c.1249.076.2479.15511.39813.2493l.2243-1.04263h3.649c-.17647 1.19961-.34906 2.37655-.52284 3.55331-.28633 1.93867-.562 3.879-.864 5.81525-.22886 1.46744-.44444 2.93952-.75 4.39185a5.60924 5.60924 0 0 1-4.60611 4.52485c-.28117.06615-.56414.1247-.84627.18678h-1.5206c-.24847-.06306-.49781-.12295-.74528-.18971a4.96093 4.96093 0 0 1-3.38858-2.409 7.12736 7.12736 0 0 1-.67928-2.155zm9.7075-7.61142a2.88344 2.88344 0 0 0-1.83042-2.84014 2.98508 2.98508 0 0 0-3.25292.74631 3.6691 3.6691 0 0 0-.26072 4.28033 2.72782 2.72782 0 0 0 4.45054.28623 3.71606 3.71606 0 0 0 .89352-2.47273zM114.04959 4.94215c-.08453.48292-.17587.96478-.25187 1.449-.09625.61344-.18 1.22883-.27537 1.886-.452 0-.89277.01181-1.33247-.0047-.24031-.009-.33743.044-.37789.31312q-.63948 4.25229-1.31912 8.49849c-.01467.09255-.12934.24142-.199.24233-1.15881.01512-2.31788.01078-3.51937.01078.44235-3.05941.87581-6.05736 1.31512-9.09577h-1.38778l.53937-3.66355h1.41534c.07593-.51215.14726-.99782.22007-1.48327.13915-.92766.2805-1.855.41687-2.78307A2.26737 2.26737 0 0 0 109.29752 0h3.73829l-.68769 4.562h1.70147z"/>
+              <path class="ax" d="M42.40071 11.70371h-8.67418a2.60931 2.60931 0 0 0 2.0879 2.68211A3.30962 3.30962 0 0 0 38.969 13.1754c.07616-.08663.15083-.17456.24769-.2868l2.62818 1.36271A7.72667 7.72667 0 0 1 36.88 17.35608a6.32792 6.32792 0 0 1-4.51753-.91837 5.75391 5.75391 0 0 1-2.63786-4.63408A7.19081 7.19081 0 0 1 31.74986 6.174a6.4689 6.4689 0 0 1 8.07873-1.042 5.61313 5.61313 0 0 1 2.35091 3.79652c.1543.83583.18031 1.69546.25964 2.54478a.975.975 0 0 1-.03843.23041zm-3.38433-2.59423a1.97723 1.97723 0 0 0-1.36553-1.86635 3.94561 3.94561 0 0 0-1.02344-.15737 2.70213 2.70213 0 0 0-2.72383 2.02372zM56.16128 11.72709h-8.77306a2.69711 2.69711 0 0 0 1.58906 2.53559 3.33692 3.33692 0 0 0 3.92217-1.34768l2.67155 1.38393c-.52157.51245-.987 1.02461-1.50854 1.47123a6.74951 6.74951 0 0 1-4.395 1.68826 5.92128 5.92128 0 0 1-6.27264-5.827 7.02122 7.02122 0 0 1 3.81528-6.74659 6.17328 6.17328 0 0 1 7.1038.94286 6.30513 6.30513 0 0 1 1.62073 3.5024c.11845.77671.15115 1.5665.22665 2.397zm-3.44054-2.594a2.05246 2.05246 0 0 0-1.07451-1.72669 2.86951 2.86951 0 0 0-2.949.158 3.03846 3.03846 0 0 0-1.1424 1.56876z"/>
+              <path class="bx" d="M93.12481 11.79512h-8.714a2.62721 2.62721 0 0 0 2.54259 2.7248 3.32638 3.32638 0 0 0 2.702-1.21048c.09112-.10138.1777-.20685.28326-.33014l2.57942 1.34063c-.0101.04563-.00758.08046-.02363.10019a7.70345 7.70345 0 0 1-4.50211 2.96255 6.14516 6.14516 0 0 1-6.87463-3.00967 6.28377 6.28377 0 0 1-.68638-3.3666 7.05294 7.05294 0 0 1 3.16121-5.66811 6.31241 6.31241 0 0 1 7.26157.11089 5.26719 5.26719 0 0 1 1.31216 1.52692 9.32476 9.32476 0 0 1 .95854 4.81902zM89.74854 9.191c-.02592-.15932-.03545-.27466-.06408-.385a2.07789 2.07789 0 0 0-1.97466-1.62094 2.76006 2.76006 0 0 0-3.08556 2.006zM95.315 4.569h3.72385l-.22016 1.28841c.51255-.344.97331-.65455 1.43534-.96316a3.45462 3.45462 0 0 1 2.59657-.55313 3.1761 3.1761 0 0 1 2.5124 2.36381 6.8735 6.8735 0 0 1 .11609 3.31636c-.32606 2.06029-.627 4.12457-.93825 6.18721-.04559.3021-.08.60653-.14307.90491-.0157.07423-.12258.18414-.18826.18465-1.15041.00895-2.30092.00356-3.45141-.00023-.01822-.00006-.03637-.01909-.06889-.03728.19607-1.28461.39585-2.57429.58909-3.86495.19814-1.32332.40643-2.64551.57423-3.97274a3.95439 3.95439 0 0 0-.0496-1.1948 1.35234 1.35234 0 0 0-2.1545-.81844A2.91591 2.91591 0 0 0 98.40936 9.259c-.199.81646-.31853 1.65343-.449 2.48517-.28421 1.81121-.55332 3.62479-.82942 5.43727a.652.652 0 0 1-.03455.1H93.383z"/>
+              <path class="ax" d="M26.003 5.22053a6.1035 6.1035 0 0 1 2.09165-1.0087 3.03862 3.03862 0 0 1 2.25911.3125l-.895 3.43363a3.56218 3.56218 0 0 0-1.91458-.206 2.49044 2.49044 0 0 0-2.06739 1.78719 16.94154 16.94154 0 0 0-.56825 2.51791c-.2824 1.684-.51809 3.37578-.784 5.06261-.01254.07956-.13029.20321-.20017.204-1.16013.01273-2.32043.00907-3.53463.00907L22.3555 4.43917h3.68317l-.07146.74638-.03026.039z"/>
+              <path class="bx" d="M66.40449 18.24634c-1.0031-.00246-2.00643-.01747-3.00916.00077a.3954.3954 0 0 1-.45464-.3428c-.3357-1.08673-.69019-2.16766-1.03693-3.24776h-4.97729l.44407-2.92232h3.58412l-2.42809-7.51645c.20179-.00992.37512-.02528.5485-.02582.83424-.00259 1.66865.0076 2.50264-.00695a.34179.34179 0 0 1 .397.28325c.91836 2.87021 1.8486 5.73662 2.77163 8.60534q.83238 2.587 1.6533 5.17762z"/>
+            </svg>
+          </div>
+          <div class="block-title">
+            <h3>How FreeAgent prevented 33 major attacks last year with Sqreen</h3>
+            <span class="link">
+              Read the case study<img src="https://d33wubrfki0l68.cloudfront.net/2d18b17a6e986b108fa56003f1f96c8ebd3a3d11/b8844/assets/img/icons/small-right-arrow.svg" alt="Read the case study">
+            </span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/customers/triplebyte">
+          <div class="cover" style="color:#f3f6f9">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1067 200" width="1067" height="200">
+              <style>
+                .st0{fill:#171e22}.st1{fill:#269ccf}
+              </style>
+              <path class="st0" d="M240.3 50H261v99.7h-20.7zM305.5 50h20.7v99.7h-20.7zM404.8 50h20.7v99.7h-20.7zM439.3 50H460v99.7h-20.7zM530.9 50h20.7v99.7h-20.7zM615.7 50h20.7v99.7h-20.7z"/>
+              <path class="st1" d="M711.3 50h11.2v99.7h-11.2zM937.2 50h11.2v99.7h-11.2zM837.9 102.4h11.2v47.3h-11.2zM994.4 50h11.2v99.7h-11.2z"/>
+              <path transform="rotate(90 1030.70955 144.96655)" class="st1" d="M1026 108.7h9.5v72.6h-9.5z"/>
+              <path transform="rotate(90 1030.7096 55.1023)" class="st1" d="M1025.6 18.8h10.3v72.6h-10.3z"/>
+              <path transform="rotate(90 1030.7096 99.8339)" class="st1" d="M1026 63.5h9.4v72.6h-9.4z"/>
+              <path transform="rotate(90 942.7869 55.1023)" class="st1" d="M937.6 15.9h10.3v78.4h-10.3z"/>
+              <path transform="rotate(-90 250.6408 60.3139)" class="st0" d="M240.3 19.4H261v81.8h-20.7z"/>
+              <path transform="rotate(-90 566.28485 139.35965)" class="st0" d="M555.9 104h20.7v70.7h-20.7z"/>
+              <path transform="rotate(-90 652.8998 139.3596)" class="st0" d="M642.6 102.2h20.7v74.4h-20.7z"/>
+              <path transform="rotate(-90 652.89975 99.83675)" class="st0" d="M642.6 62.6h20.7V137h-20.7z"/>
+              <path transform="rotate(-90 652.8998 60.3139)" class="st0" d="M642.6 23.1h20.7v74.4h-20.7z"/>
+              <path class="st0" d="M336 98.6h13.9s16.8 1.2 16.8-14.9c0-15.6-16.2-14.9-16.2-14.9h-24.4V50h24.2s37-1.5 37 33-35.9 33.9-35.9 33.9h-25.3v-8.8l9.9-9.5zM469.1 100.6H484s11.8-.4 11.8-16.9c0-15-16.2-14.9-16.2-14.9h-24.4V50h24.2s37-1.5 37 33-30.9 35.9-30.9 35.9h-26.3v-8.8l9.9-9.5z"/>
+              <path class="st0" d="M390.7 149.7l-26.2-38.1h-24.7l25.5 38.1z"/>
+              <path class="st1" d="M890.4 50h-12l-40.5 58.9h11.2z"/>
+              <path class="st1" d="M796.6 50h12l40.5 58.9h-11.2zM786.2 75.4c0 29.2-28.4 28.4-28.4 28.4h-35.3v-9.4h36.3s16.8-.8 16.8-17.6c0-17.7-17.8-17-17.8-17h-35.3V50h35.2s28.5.5 28.5 25.4z"/>
+              <path class="st1" d="M791.5 121.3c0 29.2-33.7 28.4-33.7 28.4h-35.3v-9.4h36.3s22.1-.8 22.1-17.6c0-17.7-23.1-18-23.1-18h-35.3v-9.9h35.2c0 .1 33.8 1.6 33.8 26.5zM36.8 63.6l4 2.4-4-2.4zM85.9 0L0 50v99.7L85.9 200l86.5-50.3V50L85.9 0zm72.5 64.9L143 74.1V74l-13.5 7.9v43.2l-36.4 20.8v16.3l49.9-29.5V90.1l15.5-9.5v61L86 183.7l-72-42.1V81.4l16 9.3v41.9l49.4 29.3v-16l-35.9-20.6.3-42.9-3.1-1.7-.3-.2L14 65.6v-7.5l7-4.1 15.7 9.5 4 2.4.2.1.3.2 7.1 4.2 1.5 1L86.2 50l36.5 21.6 14.1-7.9-50.6-29L49.7 56 34 46.5l52-30.2 72.5 41.8v6.8z"/>
+              <path class="st1" d="M49.9 71.6l-8.6-5.3 7.1 4.3z"/>
+            </svg>
+          </div>
+          <div class="block-title">
+            <h3>How Triplebyte created an application security foundation with Sqreen</h3>
+            <span class="link">
+              Read the case study<img src="https://d33wubrfki0l68.cloudfront.net/2d18b17a6e986b108fa56003f1f96c8ebd3a3d11/b8844/assets/img/icons/small-right-arrow.svg" alt="Read the case study">
+            </span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/customers/front">
+          <div class="cover" style="color:#f3f6f9">
+            <svg xmlns="http://www.w3.org/2000/svg" width="123" height="26" viewBox="0 0 123 26" alt='Front'>
+              <g fill="#ff6b6b" fill-rule="evenodd">
+                <path d="M18.18 0c-.1 0-.17.04-.24.1L16 1.47c-.14.12-.35.12-.5 0L13.58.1c-.07-.06-.15-.1-.24-.1h-8.6c-.1 0-.2.05-.26.12C1.9 2.86.3 6.52.3 10.56c-.04 8.38 6.8 15.3 15.23 15.42 8.65.12 15.7-6.8 15.7-15.35 0-4.07-1.6-7.76-4.2-10.5-.06-.08-.16-.12-.26-.12h-8.6zm7.72 10.8c0 5.78-4.9 10.5-10.78 10.2-5.24-.3-9.28-4.6-9.46-9.83-.1-2.7.8-5.16 2.44-7.03.12-.14.1-.36-.02-.5L5.05.68l10.27 7.3c.27.23.66.23.92 0L26.52.68l-3.1 2.96c-.13.13-.14.35 0 .5 1.56 1.77 2.48 4.1 2.48 6.65zM42.06 21.27h3.96V15.1h5.88v-3.44h-5.88V7.9h6.86V4.3H42.06v16.97M68.48 9.8c0-3.1-2.1-5.62-7.42-5.62-2 0-3.6.12-5.03.28v16.8H60V15.7c.55.05.88.07 1.46.07.23 0 .44 0 .68-.02l2.9 5.53h4.5l-4-6.55c1.84-1.1 2.94-2.9 2.94-4.9zm-7.23 2.76c-.47 0-.75-.02-1.26-.07V7.8c.5-.1.9-.12 1.5-.12 1.7 0 2.8.83 2.8 2.25 0 1.7-1.2 2.6-3.1 2.6zM79.67 4.02c-5.3 0-8.84 3.77-8.84 8.77 0 4.9 3.38 8.7 8.68 8.7s8.9-3.8 8.9-8.78c0-5-3.4-8.78-8.66-8.78zm-.1 14.03c-2.7 0-4.52-2.22-4.52-5.26 0-3.1 1.82-5.3 4.53-5.3 2.7 0 4.52 2.2 4.52 5.22 0 3.03-1.82 5.25-4.52 5.25zM102.2 13.1L92 3.97l-.53.1v17.2h3.95V12.4l10.3 9.2.4-.08V4.3h-3.96v8.8M108.6 4.3v3.6h5.13v13.37h3.96V7.9h5.1V4.3h-14.2"/>
+              </g>
+            </svg>
+          </div>
+          <div class="block-title">
+            <h3>Scaling security through trust and automation: why Front chose Sqreen</h3>
+            <span class="link">
+              Read the case study<img src="https://d33wubrfki0l68.cloudfront.net/2d18b17a6e986b108fa56003f1f96c8ebd3a3d11/b8844/assets/img/icons/small-right-arrow.svg" alt="Read the case study">
+            </span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/customers/rainforest">
+          <div class="cover" style="color:#f3f6f9">
+            <img src="https://d33wubrfki0l68.cloudfront.net/55d8682f428cc341e947789cdd272ae91c6ab2c2/31114/assets/img/logos/company-logos/rainforest.svg" alt="Rainforest QA">
+          </div>
+          <div class="block-title">
+            <h3>How Rainforest QA’s security team got peace of mind with Sqreen</h3>
+            <span class="link">
+              Read the case study<img src="https://d33wubrfki0l68.cloudfront.net/2d18b17a6e986b108fa56003f1f96c8ebd3a3d11/b8844/assets/img/icons/small-right-arrow.svg" alt="Read the case study">
+            </span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/customers/le-monde">
+          <div class="cover" style="color:#f3f6f9">
+            <img src="https://d33wubrfki0l68.cloudfront.net/cce986dce708c836b1039a58a46d90e51bb064cf/fd6bc/assets/img/logos/le-monde.svg" alt="Le Monde">
+          </div>
+          <div class="block-title">
+            <h3>Finding a straightforward security solution that scales: why Le Monde chose Sqreen</h3>
+            <span class="link">
+              Read the case study<img src="https://d33wubrfki0l68.cloudfront.net/2d18b17a6e986b108fa56003f1f96c8ebd3a3d11/b8844/assets/img/icons/small-right-arrow.svg" alt="Read the case study">
+            </span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/customers/nestaway">
+          <div class="cover" style="color:#f3f6f9">
+            <img src="https://d33wubrfki0l68.cloudfront.net/2190ae07ec87b0809aadb7720350ca9ef18742d5/4b57e/assets/img/logos/company-logos/nestaway.svg" alt="Nestaway">
+          </div>
+          <div class="block-title">
+            <h3>How India's largest home rental marketplace protects its apps with Sqreen without false positives</h3>
+            <span class="link">
+              Read the case study<img src="https://d33wubrfki0l68.cloudfront.net/2d18b17a6e986b108fa56003f1f96c8ebd3a3d11/b8844/assets/img/icons/small-right-arrow.svg" alt="Read the case study">
+            </span>
+          </div>
+        </a>
+      </li>
+      
+      <li>
+        <a href="/customers/otcbtc">
+          <div class="cover" style="color:#f3f6f9">
+            <img src="https://d33wubrfki0l68.cloudfront.net/1f026aa97cc98795c6949f8f7509b8e380c99a2f/7d56d/assets/img/logos/company-logos/otcbtc.svg" alt="Rainforest QA">
+          </div>
+          <div class="block-title">
+            <h3>How one of the largest cryptocurrency exchanges handles security with Sqreen</h3>
+            <span class="link">
+              Read the case study<img src="https://d33wubrfki0l68.cloudfront.net/2d18b17a6e986b108fa56003f1f96c8ebd3a3d11/b8844/assets/img/icons/small-right-arrow.svg" alt="Read the case study">
+            </span>
+          </div>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</section>
+
+<section class="ebooks" id="datasheets">
+  <div class="wrapper">
+    <h2>Datasheets</h2>
+    <ul>
+      <li>
+        <a href="/resources/sqreen-datasheet" class="cover">
+          <img class="front" src="https://d33wubrfki0l68.cloudfront.net/4d11d43ef66ca8f38f6516468ff0193e3181df29/f552f/assets/img/ebooks/datasheet-sqreen.png" alt="Sqreen Datasheet"/>
+          <img class="back" src="https://d33wubrfki0l68.cloudfront.net/4d11d43ef66ca8f38f6516468ff0193e3181df29/f552f/assets/img/ebooks/datasheet-sqreen.png" alt="Sqreen Datasheet"/>
+        </a>
+        <h3>Sqreen DataSheet</h3>
+        <a href="/resources/sqreen-datasheet" class="link">Download the datasheet</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="security-grader-block">
+  <div class="wrapper">
+    <div class="left">
+      <h2>Web Application Security<br>Learning Center</h2>
+      <p>Everything you wanted to know about web application security, from tooling to terminology to major frameworks.</p>
+      <a href="/web-application-security" class="new-button violet large">Learn more</a>
+    </div>
+    <div class="right">
+      <img src="https://d33wubrfki0l68.cloudfront.net/64767eeb7ca39f7ab543bdb23bef6d8c020b6548/f3c26/assets/img/illustrations/book-shelf.svg" alt="Picture of the Learning Center">
+    </div>
+  </div>
+</section>
+
+<section class="ebooks" id="cheatsheets">
+  <div class="wrapper">
+    <h2>Cheat sheets</h2>
+    <ul>
+      <li>
+        <a href="/resources/content-security-policy" class="cover">
+          <img class="front" src="https://d33wubrfki0l68.cloudfront.net/c4f8d0c7af509ef99cb70dc3be4b48a4cf5329c7/13909/assets/img/ebooks/cover-small-content-security-policy.jpg" alt="Content Security Policy"/>
+          <img class="back" src="https://d33wubrfki0l68.cloudfront.net/c4f8d0c7af509ef99cb70dc3be4b48a4cf5329c7/13909/assets/img/ebooks/cover-small-content-security-policy.jpg" alt="Content Security Policy"/>
+        </a>
+        <h3>Integrating a Content<br>Security Policy</h3>
+        <a href="/resources/content-security-policy" class="link">Download the cheat sheet</a>
+      </li>
+      <li>
+        <a href="/resources/docker-security-best-practices" class="cover">
+          <img class="front" src="https://d33wubrfki0l68.cloudfront.net/cf005e79655c6d7a7bca4e6cbce111c0130b423b/c4dba/assets/img/ebooks/cover-large-docker-security-best-practices.jpg" alt="Docker Security"/>
+          <img class="back" src="https://d33wubrfki0l68.cloudfront.net/cf005e79655c6d7a7bca4e6cbce111c0130b423b/c4dba/assets/img/ebooks/cover-large-docker-security-best-practices.jpg" alt="Docker Security"/>
+        </a>
+        <h3>Docker Security Best Practices</h3>
+        <a href="/resources/docker-security-best-practices" class="link">Download the cheat sheet</a>
+      </li>
+      <li>
+        <a href="/resources/secdevops" class="cover">
+          <img class="front" src="https://d33wubrfki0l68.cloudfront.net/ec2382b7c9c973e743cf0386bf0928e67eb167c0/84e16/assets/img/ebooks/cover-large-secdevops.jpg" alt="SecDevOps"/>
+          <img class="back" src="https://d33wubrfki0l68.cloudfront.net/ec2382b7c9c973e743cf0386bf0928e67eb167c0/84e16/assets/img/ebooks/cover-large-secdevops.jpg" alt="SecDevOps"/>
+        </a>
+        <h3>SecDevOps</h3>
+        <a href="/resources/secdevops" class="link">Download the cheat sheet</a>
+      </li>
+      <li>
+        <a href="/resources/ruby-vulnerabilities" class="cover">
+          <img class="front" src="https://d33wubrfki0l68.cloudfront.net/3684eb2b0b1365d5fa4d7596cf242f2b71f269fe/2901e/assets/img/ebooks/cover-large-ruby-vulnerabilities.jpg" alt="Ruby Vulnerabilities"/>
+          <img class="back" src="https://d33wubrfki0l68.cloudfront.net/3684eb2b0b1365d5fa4d7596cf242f2b71f269fe/2901e/assets/img/ebooks/cover-large-ruby-vulnerabilities.jpg" alt="Ruby Vulnerabilities"/>
+        </a>
+        <h3>Protecting Ruby apps from<br>intrusions and vulnerabilities</h3>
+        <a href="/resources/ruby-vulnerabilities" class="link">Download the cheat sheet</a>
+      </li>
+      <li>
+        <a href="/resources/securing-legacy-php-apps" class="cover">
+          <img class="front" src="https://d33wubrfki0l68.cloudfront.net/d905db186444598c6db9716b42579e2b63f5026f/20eb3/assets/img/ebooks/cover-large-securing-legacy-php-apps.jpg" alt="Securing Legacy PHP Apps"/>
+          <img class="back" src="https://d33wubrfki0l68.cloudfront.net/22fba12749224ce6a68c70ea68528faae03ff810/cfa48/assets/img/ebooks/cover-small-securing-legacy-php-apps.jpg" alt="Securing Legacy PHP Apps"/>
+        </a>
+        <h3>Securing Legacy PHP Apps</h3>
+        <a href="/resources/securing-legacy-php-apps" class="link">Download the cheat sheet</a>
+      </li>
+      <li>
+        <a href="/resources/web-application-firewalls" class="cover">
+          <img class="front" src="https://d33wubrfki0l68.cloudfront.net/cacae5901bda33d5f8411bea53db52564d47e176/10cdf/assets/img/ebooks/cover-large-web-application-firewalls.jpg" alt="You need more than a Web Application Firewall"/>
+          <img class="back" src="https://d33wubrfki0l68.cloudfront.net/cacae5901bda33d5f8411bea53db52564d47e176/10cdf/assets/img/ebooks/cover-large-web-application-firewalls.jpg" alt="You need more than a Web Application Firewall"/>
+        </a>
+        <h3>You need more than a<br>Web Application Firewall</h3>
+        <a href="/resources/web-application-firewalls" class="link">Download the cheat sheet</a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="websites-projects" id="projects">
+  <div class="wrapper">
+    <h2>Websites / Projects</h2>
+    <ul>
+      <li>
+        <a href="https://www.sqreen.com/resources/security-page" target="_blank" rel="noreferrer nooppener">
+          <img src="https://d33wubrfki0l68.cloudfront.net/9993b3d3e5eb9a2e130db8db7f6dd698c43ebe38/6d6a7/assets/img/projects/badge-security-page.svg" alt="">
+          <div>
+            <h4>The Open Source Security Page</h4>
+            <span class="link">https://www.sqreen.com/resources/security-page</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/sqreen/rb-security-txt" target="_blank" rel="noreferrer nooppener">
+          <img src="https://d33wubrfki0l68.cloudfront.net/94767a2c10bf1cd675a3a30b1b1eefacadf01326/42325/assets/img/projects/badge-security-txt.svg" alt="">
+          <div>
+            <h4>Security.txt toolbox for Ruby</h4>
+            <span class="link">https://github.com/sqreen/rb-security-txt</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/sqreen/PyMiniRacer#python-mini-racer" target="_blank" rel="noreferrer nooppener">
+          <img src="https://d33wubrfki0l68.cloudfront.net/82c40ecd81e89efe29c6714e8bc811182f89c002/08e0e/assets/img/projects/badge-python-racer.svg" alt="">
+          <div>
+            <h4>Python Mini Racer</h4>
+            <span class="link">https://github.com/sqreen/PyMiniRacer#python-mini-racer</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/sqreen/awesome-nodejs-projects" target="_blank" rel="noreferrer nooppener">
+          <img src="https://d33wubrfki0l68.cloudfront.net/5f2d1bd26f49512334e293561ea76f9e7af74f11/800da/assets/img/projects/badge-nodejs.svg" alt="">
+          <div>
+            <h4>Awesome Node.js projects</h4>
+            <span class="link">https://github.com/sqreen/awesome-nodejs-projects</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.npmjs.com/package/tor-test" target="_blank" rel="noreferrer nooppener">
+          <img src="https://d33wubrfki0l68.cloudfront.net/629cde2c1feb9c94857037b297e745a19cc97593/c4b20/assets/img/projects/badge-tor.svg" alt="">
+          <div>
+            <h4>Node Tor-Test</h4>
+            <span class="link">https://www.npmjs.com/package/tor-test</span>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.sqreen.com/scanner" target="_blank" rel="noreferrer nooppener">
+          <img src="https://d33wubrfki0l68.cloudfront.net/5261519f606ef9a6f8edd788577c5967fc0feb76/6d671/assets/img/projects/badge-my-headers.svg" alt="">
+          <div>
+            <h4>Security Scanner</h4>
+            <span class="link">https://www.sqreen.com/scanner</span>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="wrapper">
+    <div class="left">
+      <img src="https://d33wubrfki0l68.cloudfront.net/463c077cea20845abf308649c637732a38fe6073/819c4/assets/img/illustrations/paper-plane-illu.svg" alt="Paper plan illustration">
+    </div>
+    <div class="right">
+      <h3>Stay in touch!</h3>
+      <p>We're publishing great new resources every week.<br>Get them straight to your inbox.</p>
+      <script src="https://go.sqreen.com/js/forms2/js/forms2.min.js"></script>
+      <form class="newsletter-form" id="mktoForm_1047"></form>
+    </div>
+  </div>
+</section>
+
+<script>
+  MktoForms2.loadForm("https://go.sqreen.com", "544-MID-880", 1047);
+  MktoForms2.whenReady(function (form) {
+    form.onSubmit(function(){
+      heap.addUserProperties({email: form.vals().Email});
+    });
+  });
+</script>
+
+<footer>
+  
+  <div class="ready">
+    <div class="wrapper">
+      <div>
+        <h4>Ready to protect your app?</h4>
+        <div class="subtitle">Get started for free · 5 min installation · No credit card required.</div>
+      </div>
+      <div>
+        <a href="https://my.sqreen.com/signup" class="button is-inline-block is-bold is-white is-big">FREE TRIAL</a>
+        <span class="or">OR</span>
+        <a href="https://www.sqreen.com/demo" class="button is-inline-block link white">Schedule a demo</a>
+      </div>
+    </div>
+  </div>
+  
+  <nav>
+    <div class="wrapper">
+      <ul>
+        <li>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="/platform">Platform overview</a></li>
+            <li><a href="/protect">Protect Applications</a></li>
+            <li><a href="/observe">Increase Visibility</a></li>
+            <li><a href="/test">Secure Code</a></li>
+            <li><a href="/customers">Customers</a></li>
+            <li><a href="https://www.sqreen.com/demo">Schedule a demo</a></li>
+          </ul>
+        </li>
+        <li class="link-list">
+          <h4>Knowledge base</h4>
+          <ul>
+            
+              <li>
+                <a href="https://www.sqreen.com/checklists/saas-cto-security-checklist">
+                The SaaS CTO Security Checklist
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://www.sqreen.com/checklists/security-engineer-checklist">
+                The Early Security Engineer’s First 90 Days Checklist
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://www.sqreen.com/web-application-security/what-is-rasp">
+                What is RASP?
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://www.sqreen.com/web-application-security/what-is-waf">
+                What is WAF?
+                </a>
+              </li>
+            
+          </ul>
+        </li>
+        <li>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/company">About</a></li>
+            <li><a href="/company#jobs">Jobs</a></li>
+            <li><a href="/terms">Terms</a></li>
+            <li><a href="/privacy">Privacy</a></li>
+            <li><a href="/press">Press</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4>Docs &amp; help</h4>
+          <ul>
+            <li><a href="https://docs.sqreen.com/">Documentation</a></li>
+            <li><a href="https://blog.sqreen.com">Blog</a></li>
+            <li><a href="/resources">Resources</a></li>
+            <li><a href="/web-application-security">Learning Center</a></li>
+            <li><a href="mailto:support@sqreen.com?Subject=Sqreen">Support</a></i>
+            <li><a href="https://changelog.sqreen.com">Change Log</a></li>
+            <li><a href="https://sqreen.status.io">Service Status</a></li>
+            <li><a href="/security">Security</a></li>
+          </ul>
+        </li>
+        <li>
+          <h4>Talk to sales</h4>
+          <ul>
+            <li>
+              Email: <a href="mailto:sales@sqreen.com">sales@sqreen.com</a>
+            </li>
+          </ul>
+          <br>
+          <br>
+          <h4>Stay in touch</h4>
+          <ul class="sns">
+            <li>
+              <a target="_blank" href="https://github.com/Sqreen">
+                <img src="https://d33wubrfki0l68.cloudfront.net/8f09b98b1334c5ef2cb2f5dc260971229d1a06b3/79a66/assets/img/logos/github-icon.svg" alt="">
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://twitter.com/SqreenIO">
+                <img src="https://d33wubrfki0l68.cloudfront.net/3ff3317a8dc0f0e4e4917f2ae8970b4e80cda5b5/80662/assets/img/logos/twitter-icon.svg" alt="">
+              </a>
+            </li>
+            <li>
+              <a target="_blank" href="https://www.linkedin.com/company/sqreen">
+                <img src="https://d33wubrfki0l68.cloudfront.net/cc3606fa27a57e4285450f26a02fed156da314fb/88ba8/assets/img/logos/linkedin-icon.svg" alt="">
+              </a>
+            </li>
+          </ul>
+          <span class="copyright">©Sqreen 2015-2020</span>
+          <div class="badges">
+            <a title="Realtime application protection" href="https://docs.sqreen.com/faq/sqreen-badges/">
+              <img style="width:109px;height:36px" src="https://assets.sqreen.com/badges/20171107/sqreen-light-badge.svg" alt="Sqreen | Runtime Application Protection" />
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</footer>
+
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+<script>
+// Changing color of navigation
+//=========================================
+$(document).ready(function(){
+  if ($('header').offset().top >= (window.innerHeight/6)) {
+    $('header').addClass('scrolled');
+  }
+  $(window).on('scroll', function() {
+    var winHeight = window.innerHeight;
+    var winScroll = $('header').offset().top;
+    if (winScroll >= 20) {
+      $('header').addClass('scrolled');
+    }
+    else {
+      $('header').removeClass('scrolled');
+    }
+  });
+
+  // Menu mobile
+  $('.burger').on('click', function(){
+    $('header').toggleClass('open');
+  });
+
+  // Add tracking data to dashboard links if available
+  var attributions = location.search
+    .slice(1)
+    .split("&")
+    .filter(function(s) {
+      return s.startsWith("utm_");
+    })
+    .join("&");
+
+  if (attributions.length > 0 || document.referrer.length > 0) {
+    $('a[href="https://my.sqreen.com/signup"]').attr(
+      "href",
+      "https://my.sqreen.com/signup?" +
+        attributions +
+        "&referrer=" +
+        btoa(document.referrer)
+    );
+    $('a[href="https://my.sqreen.com/login"]').attr(
+      "href",
+      "https://my.sqreen.com/login?" +
+        attributions +
+        "&referrer=" +
+        btoa(document.referrer)
+    );
+  }
+
+  // Add hidden Segment id to netlify forms
+  analytics.ready(function() {
+    var user = analytics.user();
+
+    if (user.id()) {
+      $('input[data-fields=sqreenUserId]').attr('value', user.id());
+    } else {
+      $('input[data-fields=segmentId]').attr('value', user.anonymousId());
+    }
+  })
+
+});
+</script>
+
+<p class="cookies-warning" style="display:none">
+  Sqreen uses cookies to make its website easier to use. <a href="/privacy">Learn more about cookies.</a>
+  <a href="#close" class="close">
+    X
+  </a>
+</p>
+
+<script>
+  $(function() {
+    var text = $('.cookies-warning');
+    var sign = text.find('.close');
+    cookieTxt = "cookiesWarningShown=1; expires=Wed, 07 Jul 3015 07:28:00 GMT";
+    if (document.cookie.indexOf("cookiesWarningShown=1") !== -1) {
+      return
+    }
+    text.show();
+    sign.click(function() {
+      text.hide();
+      document.cookie = cookieTxt;
+    })
+  })
+</script>
+
+
+
+  </body>
+</html>
